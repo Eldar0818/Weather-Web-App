@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block head %}
+    <title> 404 Not Found</title>
+{% endblock  %}
+{% block body %}
+    <form action="/weather" class="search-form">
+        <input 
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Enter a City"
+        >
+        <button
+            type="submit"
+        >
+            Get Weather
+        </button>
+    </form>
+
+    <div class="city-box">
+        <h1 class="city-title">{{ title }} City Not Found :( </h1>
+        <p class="city-temp-info">Please enter valid city name!</p>
+        <a href="/home">Clear</a>
+    </div>
+{% endblock  %}
